@@ -77,8 +77,8 @@ const Detail = ({ postDetails }: DetailsProps) => {
         <div className='absolute top-0 left-0 flex flex-wrap w-full bg-white lg:flex-nowrap'>
             <div className="relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-black">
                 <div className="absolute z-50 flex gap-6 top-6 left-2 lg:lez-50">
-                    <p className="cursor-pinter" onClick={()=> router.back()}>
-                        <MdOutlineCancel className='text-white text-[35px]'/>
+                    <p className="cursor-pointer" onClick={()=> router.back()}>
+                        <MdOutlineCancel className='text-white text-[35px] '/>
                     </p>
                 </div>
                 <div className="relative">
