@@ -69,13 +69,13 @@ const VideoCard = ({post}:VideoCardProps) => {
                             loop
                             ref={videoRef}
                             src={post.video.asset.url}
-                            className="lg:w-[600px] h-[300px] md:h-[400px] lg:h-[530px] w-[200px] bg-gray-100 rounded-2xl cursor-pointer"
+                            className="bg-gray-100 cursor-pointer rounded-2xl w-[300px]"
                         >
 
                         </video>
                     </Link>
                     {isHover && (
-                        <div className="absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] p-3">
+                        <div className=" bg-gray-100 absolute bottom-6 cursor-pointer opacity-60 left-8 md:left-14 lg:left-20 flex gap-10 lg:justify-between w-[160px] p-3 rounded-full">
                             {isPlaying 
                             ? (
                                 <button>
