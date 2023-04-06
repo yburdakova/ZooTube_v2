@@ -11,6 +11,12 @@ const Comments = ({comment, comments, isPostingComment, setComment, addComment}:
 
     const {userProfile, allUsers} = useAuthStore();
 
+    const handleKeyDown = (e:any) => {
+        if (e.key === 'Enter') {
+            addComment
+        }
+    };
+
     return (
         <div className='mt-6 px-10 pt-4 border-t-2 border-gray-200 bg-[#F8F8F8] border-b-2 lg:pb-0 pb-[100px]'>
             <div className="overflow-scroll lg:h-[440px]">
@@ -58,7 +64,7 @@ const Comments = ({comment, comments, isPostingComment, setComment, addComment}:
                             onChange={(e)=> setComment(e.target.value)}
                             placeholder='Add a comment...'
                         />
-                        <button className='text-gray-400' onClick={addComment}>
+                        <button className='text-gray-400' onClick={addComment} onKeyDown={handleKeyDown}>
                             {isPostingComment ? 'Commenting...' : 'Comment'}
                         </button>
                     </form>
