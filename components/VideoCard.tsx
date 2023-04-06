@@ -69,26 +69,25 @@ const VideoCard = ({post}:VideoCardProps) => {
                             loop
                             ref={videoRef}
                             src={post.video.asset.url}
-                            className="bg-gray-100 cursor-pointer rounded-2xl w-[300px]"
+                            className="bg-gray-100 cursor-pointer rounded-2xl md:w-[300px] w-[240px]"
                         >
 
                         </video>
                     </Link>
                     {isHover && (
-                        <div className=" bg-gray-100 absolute bottom-6 cursor-pointer opacity-60 left-8 md:left-14 lg:left-20 flex gap-10 lg:justify-between w-[160px] p-3 rounded-full">
+                        <div className=" bg-gray-100 absolute bottom-6 cursor-pointer opacity-60 left-10 md:left-16 flex gap-10 justify-between w-[160px] py-2 md:py-3 px-6 rounded-full text-3xl text-black">
                             {isPlaying 
                             ? (
                                 <button>
                                     <BsFillPauseFill 
                                         onClick={onVideoPress}
-                                        className='text-2xl text-black lg:text-4xl'
+                                        
                                     />
                                 </button>) 
                             : (
                                 <button>
                                     <BsFillPlayFill 
                                         onClick={onVideoPress}
-                                        className='text-2xl text-black lg:text-4xl'
                                     />
                                 </button>
                                 )
@@ -98,14 +97,12 @@ const VideoCard = ({post}:VideoCardProps) => {
                                 <button>
                                     <HiVolumeOff 
                                         onClick={()=> setIsMuted(false)}
-                                        className='text-2xl text-black lg:text-4xl'
                                     />
                                 </button>) 
                             : (
                                 <button>
                                     <HiVolumeUp 
                                         onClick={()=> setIsMuted(true)}
-                                        className='text-2xl text-black lg:text-4xl'
                                     />
                                 </button>
                                 )
